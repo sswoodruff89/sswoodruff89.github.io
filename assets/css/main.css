@@ -257,6 +257,54 @@ input, select, textarea {
 			}
 
 		}
+/* icons */
+/* .container.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+} */
+.skilllist {
+	list-style: none;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.skilllist li {
+	width: fit-content;
+	padding: 0 1%;
+	border-left: 1px solid white;
+}
+
+.skilllist li:first-child {
+	border: none;
+}
+.skill-container {
+	width: 100%;
+}
+.skills {
+	display: flex;
+	width: 100%;
+	border-radius: 1em;
+	list-style: none;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 1% 0;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.skill-icon {
+	max-width: 100px;
+	max-height: 100px;
+	height: 100%;
+	width: auto;
+	display: flex;
+}
+
+.skill-icon img {
+	width: 100%;
+}
 
 /* Row */
 
@@ -992,7 +1040,11 @@ input, select, textarea {
 		}
 
 		@media screen and (min-width: 961px) and (max-width: 1320px) {
-
+			.email {
+				color: black;
+				font-weight: bold;
+			}
+			
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -1237,7 +1289,11 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 960px) {
-
+			.email {
+				color: black;
+				font-weight: bold;
+			}
+			
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -1568,6 +1624,11 @@ input, select, textarea {
 
 				.row > .col-6-mobile {
 					width: 50%;
+				}
+
+				.email {
+					color: black;
+					font-weight: bold;
 				}
 
 				.row > .off-6-mobile {
