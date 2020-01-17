@@ -148,6 +148,12 @@ input, select, textarea {
 
 		header > p {
 			margin: 1em 0 0 0;
+			/* color: white; */
+			/* font-weight: 700; */
+			/* -webkit-text-stroke-width: 1px; */
+			/* -webkit-text-stroke-color: rgba(148, 148, 148, 0.7); */
+			/* -webkit-text-stroke-color: rgba(0, 0, 0, 0.651); */
+			/* letter-spacing: 0.05em; */
 		}
 
 	footer {
@@ -289,22 +295,43 @@ input, select, textarea {
 	border-radius: 1em;
 	list-style: none;
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.5);
+	/* background-color: rgba(0, 0, 0, 0.5); */
 	padding: 1% 0;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
+
+.skill-head {
+	width: 100%;
+	font-weight: 400;
+}
+
 .skill-icon {
 	max-width: 100px;
 	max-height: 100px;
-	height: 100%;
-	width: auto;
+	height: 50%;
+	width: 10%;
+	margin: 3% 5%;
 	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+  align-items: center;
 }
 
 .skill-icon img {
 	width: 100%;
+	position: relative;
 }
+
+.skill-icon span {
+	font-size: 0.7em;
+}
+
+/* .skill-icon:hover {
+
+} */
+
+
 
 /* Row */
 
@@ -2009,7 +2036,9 @@ input, select, textarea {
 		color: #fff !important;
 		text-decoration: none;
 		padding: 0.75em 2.5em 0.75em 2.5em;
-		background-color: #8ebebc;
+		background-color: #123f72;
+	  box-shadow: 2px 2px 4px #051f3d, -2px -2px 4px #051f3d;
+
 		border: 0;
 		cursor: pointer;
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
@@ -2043,6 +2072,11 @@ input, select, textarea {
 	.item {
 		box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05);
 		margin-bottom: 40px;
+		transform: scale(1);
+		z-index: 1;
+		transition: all 1s ease-out;
+		position: relative;
+
 	}
 
 		.item header {
@@ -2056,6 +2090,26 @@ input, select, textarea {
 				font-size: 1em;
 			}
 
+	.project-container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.item.project {
+		min-width: 45%;
+	}
+
+	.item-caption {
+		padding: 0 2%;
+		text-align: start;
+	}
+
+	/* .item:hover {
+		transform: scale(1.5);
+		transition: all 400ms ease-out;
+		z-index: 3;
+	} */
 /* Icons */
 
 	.icon {
@@ -2288,13 +2342,30 @@ input, select, textarea {
 				}
 
 				#main > section.dark strong {
-					color: #fff;
+					/* color: white; */
+					color: rgb(255, 255, 255);
+					/* color: rgba(11, 41, 104, 0.8); */
+					/* color: transparent; */
+					font-weight: 700;
+					font-size: 1.3em;
+
+						/* color: #fff; */
 					border-color: inherit;
+					text-shadow: 2px 2px 4px black, -2px -2px 4px black;
+					letter-spacing: 0.1em;
+				}
+				header > .subheader {
+					font-weight: 700;
+					color: rgb(255, 255, 255);
+					text-shadow: 2px 2px 2px black, -2px -2px 2px black;
+					letter-spacing: 0.1em;
 				}
 
 				#main > section.dark a {
 					color: #fff;
 					border-color: inherit;
+					font-weight: 500;
+
 				}
 
 					#main > section.dark a:hover {
@@ -2309,8 +2380,11 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #81918E;
-				background-image: url("../../images/banner.jpg");
+				background-image: url("../bannerf.jpg");
+				/* background-image: url("../banner_florence.jpg"); */
 			}
+
+
 
 			#main > section.two {
 				background-color: #f5fafa;
@@ -2633,12 +2707,22 @@ input, select, textarea {
 				#main section.cover {
 					padding: 4em 0;
 				}
+		
 
+		.project-container{
+			flex-direction: column;
+			text-align: center;
+
+		}
 	}
 
 /* Mobile */
 
 	@media screen and (max-width: 736px) {
+		.project-container{
+			flex-direction: column;
+			text-align: center;
+		}
 
 		/* Basic */
 
