@@ -10,6 +10,24 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<script type="text/javascript">
+
+			// Original JavaScript code by Chirp Internet: www.chirp.com.au
+			// Please acknowledge use of this code by including this header.
+
+			window.addEventListener("DOMContentLoaded", function (e) {
+
+				var images = document.getElementById("images");
+				var fadeComplete = function (e) { images.appendChild(arr[0]); };
+				var arr = images.getElementsByTagName("a");
+				for (var i = 0; i < arr.length; i++) {
+					arr[i].addEventListener("animationend", fadeComplete, false);
+				}
+
+			}, false);
+
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -20,7 +38,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<span class="image avatar48"><img src="images/sean.jpg" alt="me" /></span>
 							<h1 id="title">Sean Stephen Woodruff</h1>
 							<p>Software Engineer</p>
 						</div>
@@ -65,34 +83,7 @@
 								<h2 class="alt"><strong>Sean Stephen Woodruff</strong></h2>
 								<p class="subheader">Full Stack Software Engineer</p>
 							</header>
-<!-- 
-							<ul class="skilllist">
-								<li class="">
-									Ruby
-								</li>
-								<li class="">
-									Rails
-								</li>
-								<li class="">
-									JavaScript
-								</li>
-								<li class="">
-									React
-								</li>
-								<li class="">
-									Redux
-								</li>
-								<li class="">
-									HTML5
-								</li>
-								<li class="">
-									CSS3
-								</li>
-								<li class="">
-									Node.js
-								</li>
 
-							</ul> -->
 
 							<footer>
 								<a href="assets/Woodruff_Sean_Resume.pdf" target="_blank" class="button">Check out my resume!</a>
@@ -184,13 +175,20 @@
 							<p>Here are my projects!</p>
 
 							<div class="row">
-								<div class="project-container">
+								<div class="project-container one">
 									<article class="item project">
-										<header>
+										<header class="header-one">
 											<h3>Animetflix</h3>
 										</header>
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
+										<!-- <a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a> -->
+										<div id="images">
+											<a href="#" class="image fit"><img src="images/animetflix/home.png" alt="" /></a>
+											<!-- <a href="#" class="image fit"><img src="images/animetflix/profile.png" alt="" /></a>
+											<a href="#" class="image fit"><img src="images/animetflix/browse.png" alt="" /></a>
+											<a href="#" class="image fit"><img src="images/animetflix/details.png" alt="" /></a>
+											<a href="#" class="image fit"><img src="images/animetflix/search.png" alt="" /></a> -->
+										</div>
+										<header class="header-two">
 											<h3>Live / Repo</h3>
 										</header>
 									</article>
@@ -207,6 +205,51 @@
 									</p>
 									
 								</div>
+								<div class="project-container two">
+									<p class="item-caption">
+										UpNext is a one-stop-shop app that allows you to both log movies that you are interested in and then automatically get
+										provided with recommendations based on these interests. No longer will you have to waste time on Google searching for
+										what's next, because we'll show you what's UpNext! In the future, UpNext will take into account all of your interests and provide aggregate
+										recommendations, with media types being expanded to movies, shows, games, and music.
+									</p>
+									<article class="item project">
+										<header>
+											<h3>UpNext</h3>
+										</header>
+										<a href="#" class="image fit"><img src="images/upnext/browse.png" alt="" /></a>
+										<header>
+											<h3>Live / Repo</h3>
+										</header>
+									</article>
+
+									
+								</div>
+
+									<div class="project-container one">
+										<article class="item project">
+											<header>
+												<h3>Fire Girl</h3>
+											</header>
+											<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+											<header>
+												<h3>Live / Repo</h3>
+											</header>
+										</article>
+									
+										<p class="item-caption">
+											Welcome to Animetflix, the hot new streaming service catered to your Anime viewing needs! The moment you sign
+											up,
+											you
+											have access to a bountiful collection of Anime movies organized into toggleable carousels based on their genres.
+											Slide
+											back and forth across each list at the press of a button or search the database directly with a search input in
+											the
+											header. See a movie you like and want to watch later? Just click the "My List" button and a new list will appear
+											before
+											your eyes on the browser filled with the movies you want to watch.
+										</p>
+									
+									</div>
 								<div class="col-4 col-12-mobile">
 									<!-- <article class="item">
 										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
