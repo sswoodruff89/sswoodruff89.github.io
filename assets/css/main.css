@@ -2147,6 +2147,13 @@ input, select, textarea {
 		justify-content: center;
 	}
 
+	h3 a {
+		font-weight: bold;
+	}
+
+	h3 a:hover {
+		color: #0099ff;
+	}
 	.item-caption {
 		padding: 0 2%;
 		text-align: start;
