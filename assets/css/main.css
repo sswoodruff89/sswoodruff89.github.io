@@ -2238,7 +2238,7 @@ input, select, textarea {
 
 		.item header {
 			/* background: rgb(6, 14, 27) url("images/overlay.png"); */
-			background: rgb(6, 14, 27);
+			/* background: rgb(6, 14, 27); */
 			margin: 0;
 			padding: 1em 0 1em 0;
 			font-size: 0.8em;
@@ -2265,7 +2265,9 @@ input, select, textarea {
 		width: 100%;
 		display: flex;
 		align-items: center;
-
+		/* background-color: #00000069;
+  		margin-bottom: 2vh;
+    	border-radius: 10px; */
 	}
 
 	.item.project {
@@ -2580,11 +2582,13 @@ input, select, textarea {
 
 			#main > section.two {
 				/* background-color: #f5fafa; */
-				background-color: #112646;
+				background-color: #061222;
 			}
 
 			#main > section.three {
-				background-color: #ecf1f1;
+				/* background-color: #ecf1f1; */
+				background-color: #ecfaff;
+				/* background-color: #0f1c21; */
 			}
 
 			#main > section.four {
@@ -2905,6 +2909,9 @@ input, select, textarea {
 		.project-container.one{
 			flex-direction: column;
 			text-align: center;
+			background-color: #00000069;
+			margin-bottom: 2vh;
+			border-radius: 10px;
 		}
 
 
