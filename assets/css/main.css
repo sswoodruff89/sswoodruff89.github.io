@@ -1847,13 +1847,8 @@ input, select, textarea {
     position: absolute;
   }
   
-  #images a img {
-    /* padding: 10px;
-    border: 1px solid #ccc;
-    background: #fff; */
-  }
 
-  #images a:nth-of-type(1), #images2 a:nth-last-of-type(1) {
+  /* #images a:nth-of-type(1), #images2 a:nth-last-of-type(1) {
     animation-name: fader;
     animation-delay: 4s;
     animation-duration: 1s;
@@ -1869,18 +1864,79 @@ input, select, textarea {
   @keyframes fader {
     from { opacity: 1.0; }
     to   { opacity: 0.0; }
+  } */
+
+@keyframes multiple-image-crossfade {
+  0% {
+    opacity:1;
   }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
 
 #images, #images2 {
 	height: 74%;
     position: relative;
     /* background-color: white; */
     background: rgb(6, 14, 27);
-;
     display: flex;
     align-items: center;
 
 }
+
+/* Animetflix Slideshow */
+#images a {
+    position: absolute;
+    animation-name: multiple-image-crossfade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+	animation-duration: 12s;
+}
+
+#images a:nth-of-type(1) {
+	animation-delay: 7.5s;
+}
+
+#images a:nth-of-type(2) {
+	animation-delay: 3.5s;
+}
+
+#images a:nth-of-type(3) {
+	animation-delay: 0s;
+}
+
+/* UpNext Slideshow */
+#images2 a {
+    position: absolute;
+    animation-name: multiple-image-crossfade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+	animation-duration: 12s;
+}
+
+#images2 a:nth-of-type(1) {
+	animation-delay: 8s;
+}
+
+#images2 a:nth-of-type(2) {
+	animation-delay: 4s;
+}
+
+#images2 a:nth-of-type(3) {
+	animation-delay: 0s;
+}
+
+
 	.image {
 		display: inline-block;
 		border: 0;
@@ -1969,9 +2025,9 @@ input, select, textarea {
 		.fire-logo {
 			width: auto;
 			height: 50px;
-			animation-name: flicker;
+			/* animation-name: flicker;
 			animation-duration: 12s;
-			animation-iteration-count: infinite;
+			animation-iteration-count: infinite; */
 		}
 
 		@keyframes flicker {
@@ -2013,6 +2069,10 @@ input, select, textarea {
 			/* position: absolute; */
 			display: block;
 			width: 100%;
+		}
+
+		.image.fit.clear {
+			opacity: 0;
 		}
 
 		.image.featured {
@@ -2277,6 +2337,10 @@ input, select, textarea {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+
+	.item.project header h3{
+		color: #dedede;
 	}
 
 	.project-container .item-caption {
