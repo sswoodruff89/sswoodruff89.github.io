@@ -1069,7 +1069,8 @@ input, select, textarea {
 
 		@media screen and (min-width: 961px) and (max-width: 1320px) {
 			.email {
-				color: #061222;;
+				color: #888;
+				/* color: #061222;; */
 				font-weight: 400;
 			}
 			
@@ -1318,7 +1319,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 960px) {
 			.email {
-				color: #061222;;
+				color: #888;
 				font-weight: 400;
 			}
 			
@@ -1655,7 +1656,7 @@ input, select, textarea {
 				}
 
 				.email {
-					color: #061222;;
+					color: #888;
 					font-weight: 400;
 				}
 
@@ -2070,10 +2071,11 @@ input, select, textarea {
 			/* position: absolute; */
 			display: block;
 			width: 100%;
+			
 		}
 
-		.image.fit.clear {
-			opacity: 0;
+		.image.fit.long {
+			width: 80%;
 		}
 
 		.feature-container {
@@ -2300,9 +2302,15 @@ input, select, textarea {
 		box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05);
 		margin-bottom: 40px;
 		transform: scale(1);
+		/* for portfolio2 */
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		/*  */
 		z-index: 1;
 		transition: all 1s ease-out;
 		position: relative;
+		
 
 	}
 
@@ -2329,6 +2337,30 @@ input, select, textarea {
 				width: 40%;
 				max-width: 170px;
 				justify-content: space-around;
+			}
+
+			.item.art a {
+				transform: scale(1);
+				position: relative;
+				z-index: 1;
+				transition: all 300ms ease-in-out;
+
+			}
+
+			.item.art:hover {
+				z-index: 10004;
+			}
+
+			.item.art:hover ~ .item.art {
+				z-index: 1;
+			}
+
+
+
+			.item.art a:hover {
+				transform: scale(1.6);
+				z-index: 10004;
+				transition: all 300ms ease-in-out;
 			}
 
 	.project-container {
@@ -2668,11 +2700,15 @@ input, select, textarea {
 			}
 
 			#main > section.four {
-				background-color: #e8edec;
+				background-color: ##ecfaff;
+			}
+
+			#main > section.five {
+				background-color: #061222;
 			}
 
 			.email {
-				color: #061222;
+				color: #888;
 				font-weight: 400;
 			}
 /* Wide */
