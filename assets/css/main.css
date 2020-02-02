@@ -404,10 +404,15 @@ input, select, textarea {
 		}
 
 		.row > .col-4 {
+			transform: translateX(0);
 			width: 33.33333%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+
+			transition-property: all 0.5s ease;
+
+			
 		}
 
 		.row > .off-4 {
@@ -650,6 +655,8 @@ input, select, textarea {
 				}
 
 				.row > .col-4-wide {
+					transform: translateX(0);
+					transition: all 0.5s ease-out;
 					width: 33.33333%;
 				}
 
@@ -2030,14 +2037,14 @@ input, select, textarea {
 		.fire-logo {
 			width: auto;
 			height: 50px;
-			/* animation-name: flicker;
-			animation-duration: 12s;
-			animation-iteration-count: infinite; */
+			animation-name: flicker;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
 		}
 
 		@keyframes flicker {
 			0%, 10%, 20%, 50%, 75%, 90%{
-				filter: brightness(1.3);
+				filter: brightness(1.2);
 			}
 			5%, 15%, 30%, 65%, 85% {
 				filter: brightness(.5);
@@ -2046,9 +2053,9 @@ input, select, textarea {
 				filter: brightness(1);
 			}
 			18%, 22%, 33%, 43%, 47%, 56%, 63%, 72%, 87%, 98% {
-				filter: brightness(1.15);
+				filter: brightness(1.1);
 			}
-			3%, 28%, 33%, 45%, 47%, 52%, 68%, 79%, 84%, 92%, 99% {
+			3%, 28%, 33%, 45%, 46%, 52%, 68%, 79%, 84%, 92%, 99% {
 				filter: brightness(.7);
 			}	
 		}
@@ -2300,6 +2307,80 @@ input, select, textarea {
 		}
 
 /* Item */
+/* .row:hover .col-4:first-child {
+    transform: translateX(-29.5%) !important;
+    transition-property: all;
+	transition-duration: 0.5s;
+} */
+
+
+.row:hover > .col-4 > .item.art {
+	transform: translateX(-25.5%);
+    transition-property: all;
+    transition-duration: 0.5s;
+	
+}
+.row > .col-4:hover .item.art {
+	transform: translateY(-30.5%) !important;
+	transition-property: all;
+	transition-duration: 0.5s;
+
+}
+
+.row > .col-4:hover ~ .col-4 .item.art {
+    transform: translateX(25.5%) !important;
+    transition-property: all;
+    transition-duration: 0.5s;
+
+}
+		
+	.item.art {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+	.item.art a {
+		transform: scale(1);
+		position: relative;
+		z-index: 1;
+		transition: all 300ms ease-out;
+		background-color: #ffffff;
+
+		padding: .2em;
+		box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.65);
+
+	}
+
+	.item.art:hover {
+		z-index: 10004;
+    	/* transform: translateY(20%) !important; */
+
+	}
+
+	.item.art:hover ~ .item.art {
+		z-index: 1;
+    	transform: translateY(25%) !important;
+		transition: all 500ms ease-out;
+	}
+
+
+
+	.item.art a:hover {
+		transform: scale(1.7) translateY(13%) !important;
+		z-index: 10004;
+		transition: all 500ms ease-out;
+	}
+
+	.item.art:last-child a:hover {
+		transform: scale(1.7) translateY(25%) !important;
+	}
+
+	.item.art a:hover ~ .item.art a{
+
+	}
+
+
 
 	.item {
 		/* box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05); */
@@ -2326,6 +2407,7 @@ input, select, textarea {
 			display: flex;
 			justify-content: center;
 			overflow: hidden;
+			width: 100%;
 		}
 
 			.item header h3 {
@@ -2341,40 +2423,7 @@ input, select, textarea {
 				max-width: 170px;
 				justify-content: space-around;
 			}
-			
-			.item.art {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-
-			}
-			.item.art a {
-				transform: scale(1);
-				position: relative;
-				z-index: 1;
-				transition: all 300ms ease-in-out;
-				background-color: #ffffff;
-
-				padding: .2em;
-				box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.65);
-
-			}
-
-			.item.art:hover {
-				z-index: 10004;
-			}
-
-			.item.art:hover ~ .item.art {
-				z-index: 1;
-			}
-
-
-
-			.item.art a:hover {
-				transform: scale(1.6);
-				z-index: 10004;
-				transition: all 300ms ease-in-out;
-			}
+	
 
 	.project-container {
 		width: 100%;
@@ -2713,6 +2762,7 @@ input, select, textarea {
 			}
 
 			#main > section.four {
+				overflow: visible;
 				background-color: #ecfaff;
 			}
 
