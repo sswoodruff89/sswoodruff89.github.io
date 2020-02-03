@@ -1898,6 +1898,7 @@ input, select, textarea {
 
 #images, #images2 {
 	height: 74%;
+	width: 100%;
     position: relative;
     /* background-color: white; */
     background: rgb(6, 14, 27);
@@ -1924,7 +1925,7 @@ input, select, textarea {
 }
 
 #images a:nth-of-type(3) {
-	animation-delay: 0s;
+	animation-delay: .5s;
 }
 
 /* UpNext Slideshow */
@@ -1945,7 +1946,7 @@ input, select, textarea {
 }
 
 #images2 a:nth-of-type(3) {
-	animation-delay: 0s;
+	animation-delay: .5s;
 }
 
 
