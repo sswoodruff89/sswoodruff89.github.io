@@ -1855,28 +1855,11 @@ input, select, textarea {
     height: 292px; */
   }
 
-  #images a, #images2 a {
+  #images a, #images2 a, #images3 {
     position: absolute;
   }
   
 
-  /* #images a:nth-of-type(1), #images2 a:nth-last-of-type(1) {
-    animation-name: fader;
-    animation-delay: 4s;
-    animation-duration: 1s;
-    z-index: 20;
-  }
-  #images a:nth-of-type(2), #images2 a:nth-last-of-type(2) {
-    z-index: 10;
-  }
-  #images a:nth-of-type(n+3),  #images2 a:nth-last-of-type(n+3) {
-    display: none;
-  }
-
-  @keyframes fader {
-    from { opacity: 1.0; }
-    to   { opacity: 0.0; }
-  } */
 
 @keyframes multiple-image-crossfade {
   0% {
@@ -1896,7 +1879,25 @@ input, select, textarea {
   }
 }
 
-#images, #images2 {
+@keyframes multiple-image-crossfade-two {
+  0% {
+    opacity:1;
+  }
+  14% {
+    opacity:1;
+  }
+  20% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+#images, #images2, #images3 {
 	height: 74%;
 	width: 100%;
     position: relative;
@@ -1946,6 +1947,31 @@ input, select, textarea {
 }
 
 #images2 a:nth-of-type(3) {
+	animation-delay: .5s;
+}
+
+/* Fire Girl Slideshow */
+#images3 a {
+    position: absolute;
+    animation-name: multiple-image-crossfade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+	animation-duration: 18s;
+}
+
+#images3 a:nth-of-type(1) {
+	animation-delay: 11.5s;
+}
+
+#images3 a:nth-of-type(2) {
+	animation-delay: 7.5s;
+}
+
+#images3 a:nth-of-type(3) {
+	animation-delay: 3.5s;
+}
+
+#images3 a:nth-of-type(4) {
 	animation-delay: .5s;
 }
 
