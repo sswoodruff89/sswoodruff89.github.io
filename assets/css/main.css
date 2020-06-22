@@ -1939,18 +1939,22 @@ input, select, textarea {
     animation-name: multiple-image-crossfade;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-	animation-duration: 12s;
+	animation-duration: 16s;
 }
 
 #images2 a:nth-of-type(1) {
-	animation-delay: 7.5s;
+	animation-delay: 11.5s;
 }
 
 #images2 a:nth-of-type(2) {
-	animation-delay: 3.5s;
+	animation-delay: 7.5s;
 }
 
 #images2 a:nth-of-type(3) {
+	animation-delay: 3.5s;
+}
+
+#images2 a:nth-of-type(4) {
 	animation-delay: .5s;
 }
 
