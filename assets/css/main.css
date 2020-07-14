@@ -2464,9 +2464,7 @@ input, select, textarea {
 		width: 100%;
 		display: flex;
 		align-items: center;
-		/* background-color: #00000069;
-  		margin-bottom: 2vh;
-    	border-radius: 10px; */
+		margin-bottom: 20px;
 	}
 
 	.item.project {
