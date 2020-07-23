@@ -1900,6 +1900,7 @@ input, select, textarea {
 #images, #images2, #images3 {
 	height: 74%;
 	width: 100%;
+	max-width: 500px;
     position: relative;
     /* background-color: white; */
     background: rgb(6, 14, 27);
@@ -1964,12 +1965,12 @@ input, select, textarea {
     animation-name: multiple-image-crossfade;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-	animation-duration: 18s;
+	animation-duration: 12s;
 }
 
-#images3 a:nth-of-type(1) {
+/* #images3 a:nth-of-type(1) {
 	animation-delay: 11.5s;
-}
+} */
 
 #images3 a:nth-of-type(2) {
 	animation-delay: 7.5s;
